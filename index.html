@@ -1,0 +1,4684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KQ Fashion | Premium Fashion Store</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        :root {
+            --black: #111111;
+            --dark: #181818;
+            --white: #ffffff;
+            --light: #f7f7f5;
+            --gray: #777777;
+            --border: #e6e6e6;
+            --gold: #b28a4b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--black);
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 44px;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .btn-kq {
+            background: var(--black);
+            color: #fff;
+            border: 1px solid var(--black);
+            padding: 14px 28px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: .3s;
+        }
+
+        .btn-kq:hover {
+            background: #fff;
+            color: #111;
+        }
+
+        .btn-outline-kq {
+            background: transparent;
+            color: #111;
+            border: 1px solid #111;
+            padding: 13px 28px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: .3s;
+        }
+
+        .btn-outline-kq:hover {
+            background: #111;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ===================================================== */
+
+        .top-bar {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 1px;
+            padding: 9px 10px;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 19px 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .navbar-brand span {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link {
+            color: #222;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin: 0 7px;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: #111;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .panjabi-link {
+            color: #a47732 !important;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        .nav-icon {
+            position: relative;
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        .cart-count,
+        .wishlist-count {
+            position: absolute;
+            right: -8px;
+            top: -8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #111;
+            color: #fff;
+            font-size: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 690px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.72),
+                    rgba(0,0,0,.15)
+                ),
+                url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-small {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(55px, 8vw, 100px);
+            line-height: .94;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 510px;
+            color: #eee;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .hero .btn-kq {
+            background: #fff;
+            border-color: #fff;
+            color: #111;
+        }
+
+        .hero .btn-kq:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           FEATURES
+        ===================================================== */
+
+        .features {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 25px 10px;
+        }
+
+        .feature-item i {
+            font-size: 27px;
+        }
+
+        .feature-item h6 {
+            font-size: 14px;
+            margin: 0 0 4px;
+            font-weight: 700;
+        }
+
+        .feature-item p {
+            margin: 0;
+            color: var(--gray);
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           CATEGORIES
+        ===================================================== */
+
+        .category-card {
+            height: 520px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .7s;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .category-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.7),
+                    transparent 60%
+                );
+
+            color: #fff;
+        }
+
+        .category-overlay h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 35px;
+        }
+
+        .category-overlay a {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 5px;
+        }
+
+
+        /* =====================================================
+           PRODUCTS
+        ===================================================== */
+
+        .product-card {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .product-image {
+            position: relative;
+            overflow: hidden;
+            background: #f2f2f2;
+            aspect-ratio: 3 / 4;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-actions {
+            position: absolute;
+            right: 14px;
+            top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .product-action {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+            transition: .3s;
+        }
+
+        .product-action:hover {
+            background: #111;
+            color: #fff;
+        }
+
+        .sale-badge {
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            z-index: 2;
+            background: #111;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+
+        .product-info {
+            padding-top: 15px;
+        }
+
+        .product-category {
+            color: #999;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-name {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+        .product-price {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .old-price {
+            color: #aaa;
+            text-decoration: line-through;
+            margin-left: 7px;
+            font-weight: 400;
+        }
+
+        .color-dots {
+            display: flex;
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #aaa;
+        }
+
+        .dot-black {
+            background: #111;
+        }
+
+        .dot-white {
+            background: #fff;
+        }
+
+        .dot-brown {
+            background: #795548;
+        }
+
+        .dot-beige {
+            background: #d8c7ae;
+        }
+
+
+        /* =====================================================
+           PANJABI FEATURE
+        ===================================================== */
+
+        .panjabi-banner {
+            min-height: 500px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.5),
+                    rgba(0,0,0,.5)
+                ),
+                url("https://images.unsplash.com/photo-1622445272461-c6580cab8755?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            color: #fff;
+        }
+
+        .panjabi-banner h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(45px, 6vw, 75px);
+        }
+
+        .panjabi-banner p {
+            color: #eee;
+            max-width: 600px;
+            margin: 15px auto 30px;
+        }
+
+
+        /* =====================================================
+           PROMO
+        ===================================================== */
+
+        .promo {
+            padding: 130px 20px;
+            text-align: center;
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.6),
+                    rgba(0,0,0,.6)
+                ),
+                url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=85")
+                center/cover;
+        }
+
+        .promo h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(42px, 6vw, 70px);
+        }
+
+        .promo p {
+            max-width: 600px;
+            color: #ddd;
+            margin: 20px auto 30px;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .about-content {
+            padding: 35px;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 50px;
+        }
+
+        .about-content p {
+            color: #666;
+            line-height: 1.9;
+            margin: 20px 0;
+        }
+
+
+        /* =====================================================
+           TESTIMONIAL
+        ===================================================== */
+
+        .testimonial {
+            background: var(--light);
+            padding: 40px;
+            height: 100%;
+        }
+
+        .stars {
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .customer {
+            font-weight: 700;
+            margin-top: 25px;
+        }
+
+
+        /* =====================================================
+           INSTAGRAM
+        ===================================================== */
+
+        .instagram-item {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .instagram-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            transition: .4s;
+        }
+
+        .instagram-item:hover img {
+            transform: scale(1.05);
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ===================================================== */
+
+        .newsletter {
+            background: var(--light);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+        }
+
+        .newsletter-form {
+            max-width: 550px;
+            margin: 30px auto 0;
+            display: flex;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 18px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            border: 1px solid #111;
+            background: #111;
+            color: #fff;
+            padding: 0 28px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #111;
+            color: #fff;
+            padding-top: 75px;
+        }
+
+        .footer-logo {
+            font-size: 30px;
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
+
+        .footer-text {
+            color: #999;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        footer h5 {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            margin-bottom: 22px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 12px;
+            color: #999;
+            font-size: 13px;
+        }
+
+        footer ul li a {
+            color: #999;
+        }
+
+        footer ul li a:hover {
+            color: #fff;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+        }
+
+        .social-icons a:hover {
+            background: #fff;
+            color: #111;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #292929;
+            margin-top: 60px;
+            padding: 25px 0;
+            color: #777;
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        .search-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,.96);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-modal.active {
+            display: flex;
+        }
+
+        .search-box {
+            width: min(700px, 90%);
+        }
+
+        .search-box input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            color: #fff;
+            font-size: 34px;
+            padding: 15px 0;
+        }
+
+        .close-search {
+            position: absolute;
+            right: 40px;
+            top: 30px;
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           CART
+        ===================================================== */
+
+        .cart-sidebar {
+            position: fixed;
+            right: -430px;
+            top: 0;
+            width: 400px;
+            max-width: 90%;
+            height: 100vh;
+            z-index: 10000;
+            background: #fff;
+            padding: 30px;
+            box-shadow: -5px 0 30px rgba(0,0,0,.15);
+            transition: .4s;
+        }
+
+        .cart-sidebar.active {
+            right: 0;
+        }
+
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9998;
+            background: rgba(0,0,0,.5);
+            display: none;
+        }
+
+        .cart-overlay.active {
+            display: block;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .cart-items {
+            padding: 20px 0;
+            max-height: 65vh;
+            overflow-y: auto;
+        }
+
+        .empty-cart {
+            text-align: center;
+            color: #999;
+            padding: 50px 0;
+        }
+
+
+        /* =====================================================
+           TOAST
+        ===================================================== */
+
+        .kq-toast {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 20000;
+            background: #111;
+            color: #fff;
+            padding: 15px 22px;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: .4s;
+        }
+
+        .kq-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+
+        /* =====================================================
+           CHATBOT
+        ===================================================== */
+
+        .chat-button {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            background: #111;
+            color: #fff;
+            z-index: 19000;
+            font-size: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.25);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.08);
+        }
+
+        .chat-window {
+            position: fixed;
+            right: 25px;
+            bottom: 100px;
+            width: 370px;
+            max-width: calc(100% - 30px);
+            height: 500px;
+            background: #fff;
+            z-index: 18999;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,.25);
+            display: none;
+            flex-direction: column;
+        }
+
+        .chat-window.active {
+            display: flex;
+        }
+
+        .chat-header {
+            background: #111;
+            color: #fff;
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bot-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #fff;
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .chat-header h6 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .online {
+            font-size: 10px;
+            color: #bbb;
+        }
+
+        .chat-close {
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .chat-body {
+            flex: 1;
+            background: #f6f6f6;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .bot-message,
+        .user-message {
+            max-width: 82%;
+            padding: 11px 14px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .bot-message {
+            background: #fff;
+            border: 1px solid #eee;
+            margin-right: auto;
+        }
+
+        .user-message {
+            background: #111;
+            color: #fff;
+            margin-left: auto;
+        }
+
+        .chat-quick {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            padding: 10px 15px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+
+        .quick-btn {
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 20px;
+            padding: 6px 10px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .quick-btn:hover {
+            background: #111;
+            color: #fff;
+        }
+
+        .chat-input-area {
+            display: flex;
+            border-top: 1px solid #ddd;
+            background: #fff;
+        }
+
+        .chat-input-area input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 14px;
+            font-size: 13px;
+        }
+
+        .chat-send {
+            border: none;
+            width: 55px;
+            background: #111;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 991px) {
+
+            .category-card {
+                height: 450px;
+            }
+
+            .about-image {
+                height: 450px;
+            }
+
+            .nav-icons {
+                margin-top: 15px;
+            }
+
+        }
+
+
+        @media(max-width: 767px) {
+
+            .section-padding {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 35px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .category-card {
+                height: 400px;
+            }
+
+            .about-content {
+                padding: 25px 0;
+            }
+
+            .about-content h2 {
+                font-size: 42px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .newsletter-form button {
+                padding: 14px;
+            }
+
+            .instagram-img {
+                height: 220px;
+            }
+
+            .chat-window {
+                right: 15px;
+                bottom: 90px;
+                height: 470px;
+            }
+
+            .chat-button {
+                right: 15px;
+                bottom: 15px;
+            }
+
+        }
+
+        /* =====================================================
+           ANIMATIONS
+        ===================================================== */
+        @keyframes kqFadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes kqFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes kqFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        .hero-content {
+            animation: kqFadeUp .9s ease both;
+        }
+
+        .category-card,
+        .testimonial,
+        .feature-item,
+        .instagram-item {
+            animation: kqFadeIn .8s ease both;
+        }
+
+        .product-card {
+            transition: transform .4s ease, opacity .5s ease, filter .4s ease;
+        }
+
+        .product-card.reveal {
+            opacity: 0;
+            transform: translateY(35px);
+        }
+
+        .product-card.reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-action {
+            transition: transform .25s ease, background .3s ease, color .3s ease;
+        }
+
+        .product-action:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-kq,
+        .btn-outline-kq {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-kq::after,
+        .btn-outline-kq::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 70%;
+            height: 100%;
+            background: rgba(255,255,255,.18);
+            transform: skewX(-20deg);
+            transition: left .6s ease;
+        }
+
+        .btn-kq:hover::after,
+        .btn-outline-kq:hover::after {
+            left: 140%;
+        }
+
+        .chat-button {
+            animation: kqFloat 3s ease-in-out infinite;
+        }
+
+        .chat-window.active {
+            animation: kqFadeUp .3s ease both;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    FREE SHIPPING ON ORDERS OVER ৳12,306
+    &nbsp; • &nbsp;
+    NEW COLLECTION 2026
+
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand"
+            href="#home"
+        >
+            KQ<span>FASHION</span>
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+        >
+
+            <i class="bi bi-list fs-2"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNav"
+        >
+
+
+            <ul class="navbar-nav mx-auto">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#home"
+                    >
+                        HOME
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#shop"
+                    >
+                        SHOP
+                    </a>
+
+                </li>
+
+
+                <!-- MEN -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#"
+                        onclick="openMenCollection(); return false;"
+                    >
+                        MEN
+                    </a>
+
+                </li>
+
+
+                <!-- WOMEN -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#"
+                        onclick="openWomenCollection(); return false;"
+                    >
+                        WOMEN
+                    </a>
+
+                </li>
+
+
+                <!-- MEN'S PANJABI -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link panjabi-link"
+                        href="#"
+                        onclick="openPanjabiCollection(); return false;"
+                    >
+                        MEN'S PANJABI
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#about"
+                    >
+                        ABOUT
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#contact"
+                    >
+                        CONTACT
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+            <!-- NAV ICONS -->
+
+            <div class="nav-icons">
+
+
+                <span
+                    class="nav-icon"
+                    id="searchBtn"
+                >
+
+                    <i class="bi bi-search"></i>
+
+                </span>
+
+
+                <span class="nav-icon">
+
+                    <i class="bi bi-person"></i>
+
+                </span>
+
+
+                <span class="nav-icon">
+
+                    <i class="bi bi-heart"></i>
+
+                    <span class="wishlist-count">
+                        0
+                    </span>
+
+                </span>
+
+
+                <span
+                    class="nav-icon"
+                    id="cartBtn"
+                >
+
+                    <i class="bi bi-bag"></i>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+
+            <div class="hero-small">
+
+                KQ FASHION
+                /
+                NEW COLLECTION 2026
+
+            </div>
+
+
+            <h1>
+
+                Define
+                <br>
+                Your Style.
+
+            </h1>
+
+
+            <p>
+
+                Discover refined essentials and contemporary
+                fashion pieces designed for those who believe
+                style is a statement.
+
+            </p>
+
+
+            <a
+                href="#shop"
+                class="btn btn-kq"
+            >
+
+                SHOP COLLECTION
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <div class="col-md-3">
+
+                <div class="feature-item">
+
+                    <i class="bi bi-truck"></i>
+
+                    <div>
+
+                        <h6>
+                            Free Shipping
+                        </h6>
+
+                        <p>
+                            On orders over ৳12,306
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="feature-item">
+
+                    <i class="bi bi-arrow-repeat"></i>
+
+                    <div>
+
+                        <h6>
+                            Easy Returns
+                        </h6>
+
+                        <p>
+                            30 day return policy
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="feature-item">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <div>
+
+                        <h6>
+                            Secure Payment
+                        </h6>
+
+                        <p>
+                            100% secure checkout
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="feature-item">
+
+                    <i class="bi bi-headset"></i>
+
+                    <div>
+
+                        <h6>
+                            24/7 Support
+                        </h6>
+
+                        <p>
+                            We're here to help
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORY
+===================================================== -->
+
+<section
+    class="section-padding"
+    id="categories"
+>
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <div class="text-uppercase small fw-bold">
+                Explore
+            </div>
+
+            <h2 class="section-title">
+                Shop By Category
+            </h2>
+
+            <p class="section-subtitle">
+
+                Discover our curated collections created
+                for every mood and every moment.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- WOMEN -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="category-card"
+                    onclick="openWomenCollection()"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1000&q=85"
+                        alt="Women"
+                    >
+
+
+                    <div class="category-overlay">
+
+                        <div>
+
+                            <h3>
+                                Women
+                            </h3>
+
+                            <a>
+                                SHOP WOMEN →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEN -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="category-card"
+                    onclick="openMenCollection()"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=1000&q=85"
+                        alt="Men"
+                    >
+
+
+                    <div class="category-overlay">
+
+                        <div>
+
+                            <h3>
+                                Men
+                            </h3>
+
+                            <a>
+                                SHOP MEN →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PANJABI -->
+
+            <div class="col-md-4">
+
+                <div
+                    class="category-card"
+                    onclick="openPanjabiCollection()"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1622445272461-c6580cab8755?auto=format&fit=crop&w=1000&q=85"
+                        alt="Men's Panjabi"
+                    >
+
+
+                    <div class="category-overlay">
+
+                        <div>
+
+                            <h3>
+                                Men's Panjabi
+                            </h3>
+
+                            <a>
+                                SHOP PANJABI →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section
+    class="section-padding bg-light"
+    id="shop"
+>
+
+    <div class="container">
+
+
+        <div class="d-flex justify-content-between align-items-end mb-5">
+
+            <div>
+
+                <div class="text-uppercase small fw-bold">
+                    Our Collection
+                </div>
+
+                <h2 class="section-title">
+                    Featured Pieces
+                </h2>
+
+            </div>
+
+
+            <a
+                href="#"
+                class="btn-outline-kq d-none d-md-inline-block"
+            >
+                VIEW ALL
+            </a>
+
+        </div>
+
+
+        <div
+            class="row g-4"
+            id="productContainer"
+        >
+
+            <!-- PRODUCT 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85" alt="Classic Tailored Blazer" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Classic Tailored Blazer to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Classic Tailored Blazer" data-price="10952" aria-label="Add Classic Tailored Blazer to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Women / Blazers</div>
+                        <div class="product-name">Classic Tailored Blazer</div>
+                        <div class="product-price">৳10,952</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        
+                        <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=85" alt="Premium Essential Jacket" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Premium Essential Jacket to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Premium Essential Jacket" data-price="14644" aria-label="Add Premium Essential Jacket to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Men / Jackets</div>
+                        <div class="product-name">Premium Essential Jacket</div>
+                        <div class="product-price">৳14,644</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">SALE</span>
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85" alt="Elegant Evening Dress" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Elegant Evening Dress to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Elegant Evening Dress" data-price="9230" aria-label="Add Elegant Evening Dress to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Women / Dresses</div>
+                        <div class="product-name">Elegant Evening Dress</div>
+                        <div class="product-price">৳9,230</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        
+                        <img src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=900&q=85" alt="Premium Oxford Shirt" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Premium Oxford Shirt to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Premium Oxford Shirt" data-price="7261" aria-label="Add Premium Oxford Shirt to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Men / Shirts</div>
+                        <div class="product-name">Premium Oxford Shirt</div>
+                        <div class="product-price">৳7,261</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 5 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85" alt="Premium Silk Top" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Premium Silk Top to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Premium Silk Top" data-price="7876" aria-label="Add Premium Silk Top to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Women / Tops</div>
+                        <div class="product-name">Premium Silk Top</div>
+                        <div class="product-price">৳7,876</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 6 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">PREMIUM</span>
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85" alt="Minimal Leather Handbag" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Minimal Leather Handbag to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Minimal Leather Handbag" data-price="15875" aria-label="Add Minimal Leather Handbag to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Women / Accessories</div>
+                        <div class="product-name">Minimal Leather Handbag</div>
+                        <div class="product-price">৳15,875</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 7 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85" alt="Modern Streetwear Set" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Modern Streetwear Set to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Modern Streetwear Set" data-price="12183" aria-label="Add Modern Streetwear Set to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Men / Streetwear</div>
+                        <div class="product-name">Modern Streetwear Set</div>
+                        <div class="product-price">৳12,183</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 8 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85" alt="Classic Denim Collection" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Classic Denim Collection to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Classic Denim Collection" data-price="9722" aria-label="Add Classic Denim Collection to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Men / Denim</div>
+                        <div class="product-name">Classic Denim Collection</div>
+                        <div class="product-price">৳9,722</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 9 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1622445272461-c6580cab8755?auto=format&fit=crop&w=900&q=85" alt="Royal Black Panjabi" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Royal Black Panjabi to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Royal Black Panjabi" data-price="10952" aria-label="Add Royal Black Panjabi to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panjabi / Premium</div>
+                        <div class="product-name">Royal Black Panjabi</div>
+                        <div class="product-price">৳10,952</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 10 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        
+                        <img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=900&q=85" alt="Classic White Panjabi" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Classic White Panjabi to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Classic White Panjabi" data-price="8491" aria-label="Add Classic White Panjabi to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panjabi / Classic</div>
+                        <div class="product-name">Classic White Panjabi</div>
+                        <div class="product-price">৳8,491</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 11 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">PREMIUM</span>
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=85" alt="Embroidered Premium Panjabi" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Embroidered Premium Panjabi to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Embroidered Premium Panjabi" data-price="14644" aria-label="Add Embroidered Premium Panjabi to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panjabi / Embroidery</div>
+                        <div class="product-name">Embroidered Premium Panjabi</div>
+                        <div class="product-price">৳14,644</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 12 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">SALE</span>
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85" alt="Eid Special Panjabi" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Eid Special Panjabi to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Eid Special Panjabi" data-price="12183" aria-label="Add Eid Special Panjabi to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panjabi / Festive</div>
+                        <div class="product-name">Eid Special Panjabi</div>
+                        <div class="product-price">৳12,183</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 13 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        
+                        <img src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=900&q=85" alt="Royal Blue Panjabi" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Royal Blue Panjabi to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Royal Blue Panjabi" data-price="9722" aria-label="Add Royal Blue Panjabi to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panjabi / Premium</div>
+                        <div class="product-name">Royal Blue Panjabi</div>
+                        <div class="product-price">৳9,722</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 14 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="sale-badge">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=85" alt="Festive Gold Panjabi" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Festive Gold Panjabi to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Festive Gold Panjabi" data-price="15875" aria-label="Add Festive Gold Panjabi to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Panjabi / Festive</div>
+                        <div class="product-name">Festive Gold Panjabi</div>
+                        <div class="product-price">৳15,875</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 15 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        
+                        <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85" alt="Contemporary Relaxed Dress" loading="lazy">
+                        <div class="product-actions">
+                            <button class="product-action wishlist-btn" aria-label="Add Contemporary Relaxed Dress to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="product-action add-cart" data-name="Contemporary Relaxed Dress" data-price="9230" aria-label="Add Contemporary Relaxed Dress to cart">
+                                <i class="bi bi-bag-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Women / Dresses</div>
+                        <div class="product-name">Contemporary Relaxed Dress</div>
+                        <div class="product-price">৳9,230</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PANJABI BANNER
+===================================================== -->
+
+<section class="panjabi-banner">
+
+    <div class="container">
+
+        <div class="text-uppercase small fw-bold">
+            KQ Traditional Collection
+        </div>
+
+        <h2>
+            Men's Panjabi
+        </h2>
+
+        <p>
+
+            Celebrate tradition with a modern touch.
+            Explore premium Panjabis designed for
+            Eid, weddings and special occasions.
+
+        </p>
+
+        <button
+            class="btn btn-kq"
+            onclick="openPanjabiCollection()"
+        >
+
+            EXPLORE PANJABI
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROMO
+===================================================== -->
+
+<section class="promo">
+
+    <div class="container">
+
+        <div class="text-uppercase small fw-bold mb-3">
+            KQ Exclusive
+        </div>
+
+        <h2>
+
+            Timeless Style.
+            <br>
+            Modern Attitude.
+
+        </h2>
+
+        <p>
+
+            Elevate your wardrobe with pieces that are
+            designed to stay relevant season after season.
+
+        </p>
+
+        <a
+            href="#shop"
+            class="btn btn-kq"
+        >
+            SHOP NOW
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    class="section-padding"
+    id="about"
+>
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6">
+
+                <img
+                    class="about-image"
+                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85"
+                    alt="KQ Fashion"
+                >
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="about-content">
+
+                    <div class="text-uppercase small fw-bold">
+                        Our Story
+                    </div>
+
+                    <h2>
+
+                        Fashion That
+                        <br>
+                        Feels Like You.
+
+                    </h2>
+
+                    <p>
+
+                        KQ Fashion was created with one simple
+                        idea: fashion should feel effortless,
+                        confident and personal.
+
+                    </p>
+
+                    <p>
+
+                        We carefully select modern silhouettes,
+                        premium fabrics and timeless designs
+                        to create a wardrobe that goes beyond trends.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-outline-kq"
+                    >
+                        DISCOVER KQ
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TESTIMONIALS
+===================================================== -->
+
+<section class="section-padding bg-light">
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <div class="text-uppercase small fw-bold">
+                Customer Love
+            </div>
+
+            <h2 class="section-title">
+                What They Say
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+
+                        "The quality is honestly amazing.
+                        The blazer fits perfectly and looks
+                        even better in person."
+
+                    </p>
+
+                    <div class="customer">
+                        — Sarah M.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+
+                        "KQ Fashion has quickly become one
+                        of my favorite places to shop.
+                        Everything feels premium."
+
+                    </p>
+
+                    <div class="customer">
+                        — Daniel R.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+
+                        "Beautiful designs, fast delivery
+                        and excellent customer service.
+                        Highly recommended."
+
+                    </p>
+
+                    <div class="customer">
+                        — Emma K.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INSTAGRAM
+===================================================== -->
+
+<section class="section-padding">
+
+    <div class="container-fluid px-lg-5">
+
+
+        <div class="text-center mb-5">
+
+            <div class="text-uppercase small fw-bold">
+                Follow @kqfashion
+            </div>
+
+            <h2 class="section-title">
+                Style In Motion
+            </h2>
+
+        </div>
+
+
+        <div class="row g-2">
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="instagram-item">
+
+                    <img
+                        class="instagram-img"
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=85"
+                        alt=""
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="instagram-item">
+
+                    <img
+                        class="instagram-img"
+                        src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=85"
+                        alt=""
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="instagram-item">
+
+                    <img
+                        class="instagram-img"
+                        src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=800&q=85"
+                        alt=""
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="instagram-item">
+
+                    <img
+                        class="instagram-img"
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85"
+                        alt=""
+                    >
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <div class="text-uppercase small fw-bold">
+            Stay Connected
+        </div>
+
+        <h2>
+            Join The KQ Community
+        </h2>
+
+        <p class="text-muted">
+
+            Subscribe for new collections,
+            exclusive offers and fashion inspiration.
+
+        </p>
+
+
+        <form
+            class="newsletter-form"
+            id="newsletterForm"
+        >
+
+            <input
+                type="email"
+                placeholder="Your email address"
+                required
+            >
+
+            <button type="submit">
+                SUBSCRIBE
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="contact">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-4">
+
+                <div class="footer-logo">
+                    KQ FASHION
+                </div>
+
+                <p class="footer-text">
+
+                    Contemporary fashion for modern living.
+                    Discover timeless pieces designed to make
+                    every day feel extraordinary.
+
+                </p>
+
+
+                <div class="social-icons mt-4">
+
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-pinterest"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>
+                    SHOP
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="#shop">
+                            New Arrivals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#"
+                            onclick="openWomenCollection(); return false;"
+                        >
+                            Women
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#"
+                            onclick="openMenCollection(); return false;"
+                        >
+                            Men
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#"
+                            onclick="openPanjabiCollection(); return false;"
+                        >
+                            Men's Panjabi
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>
+                    HELP
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Contact Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Shipping
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Returns
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Size Guide
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h5>
+                    CONTACT
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <i class="bi bi-geo-alt me-2"></i>
+                        Dhaka, Bangladesh
+                    </li>
+
+                    <li>
+                        <i class="bi bi-envelope me-2"></i>
+                        hello@kqfashion.com
+                    </li>
+
+                    <li>
+                        <i class="bi bi-telephone me-2"></i>
+                        +880 1XXX-XXXXXX
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    © 2026 KQ Fashion.
+                    All Rights Reserved.
+
+                </div>
+
+                <div class="col-md-6 text-md-end">
+
+                    Privacy Policy
+                    &nbsp; | &nbsp;
+                    Terms & Conditions
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     SEARCH MODAL
+===================================================== -->
+
+<div
+    class="search-modal"
+    id="searchModal"
+>
+
+    <span
+        class="close-search"
+        id="closeSearch"
+    >
+
+        <i class="bi bi-x-lg"></i>
+
+    </span>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+        >
+
+        <div
+            id="searchResult"
+            class="text-white mt-4"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CART
+===================================================== -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+></div>
+
+
+<div
+    class="cart-sidebar"
+    id="cartSidebar"
+>
+
+
+    <div class="cart-header">
+
+        <h4>
+            Your Bag
+        </h4>
+
+        <button
+            class="btn btn-sm"
+            id="closeCart"
+        >
+
+            <i class="bi bi-x-lg"></i>
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+
+        <div class="empty-cart">
+
+            <i class="bi bi-bag fs-1"></i>
+
+            <p class="mt-3">
+                Your bag is empty.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="d-flex justify-content-between mb-3">
+
+            <strong>
+                Total
+            </strong>
+
+            <strong id="cartTotal">
+                ৳0.00
+            </strong>
+
+        </div>
+
+
+        <button class="btn btn-kq w-100">
+
+            CHECKOUT
+
+        </button>
+
+    </div>
+
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="kq-toast"
+    id="toast"
+>
+    Added to your bag.
+</div>
+
+
+<!-- =====================================================
+     CHATBOT BUTTON
+===================================================== -->
+
+<button
+    class="chat-button"
+    id="chatButton"
+    title="Chat with KQ Assistant"
+>
+
+    <i class="bi bi-chat-dots-fill"></i>
+
+</button>
+
+
+<!-- =====================================================
+     CHATBOT WINDOW
+===================================================== -->
+
+<div
+    class="chat-window"
+    id="chatWindow"
+>
+
+
+    <!-- CHAT HEADER -->
+
+    <div class="chat-header">
+
+
+        <div class="chat-brand">
+
+            <div class="bot-avatar">
+
+                <i class="bi bi-stars"></i>
+
+            </div>
+
+
+            <div>
+
+                <h6>
+                    KQ Fashion Assistant
+                </h6>
+
+                <div class="online">
+                    ● Online
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <span
+            class="chat-close"
+            id="chatClose"
+        >
+
+            <i class="bi bi-x-lg"></i>
+
+        </span>
+
+
+    </div>
+
+
+    <!-- CHAT BODY -->
+
+    <div
+        class="chat-body"
+        id="chatBody"
+    >
+
+
+        <div class="bot-message">
+
+            Hello! 👋
+            <br><br>
+
+            Welcome to KQ Fashion.
+            I'm your fashion assistant.
+
+            <br><br>
+
+            How can I help you today?
+
+        </div>
+
+
+    </div>
+
+
+    <!-- QUICK QUESTIONS -->
+
+    <div class="chat-quick">
+
+
+        <button
+            class="quick-btn"
+            onclick="quickChat('What products do you have?')"
+        >
+            Products
+        </button>
+
+
+        <button
+            class="quick-btn"
+            onclick="quickChat('Tell me about Panjabi')"
+        >
+            Panjabi
+        </button>
+
+
+        <button
+            class="quick-btn"
+            onclick="quickChat('What is your delivery time?')"
+        >
+            Delivery
+        </button>
+
+
+        <button
+            class="quick-btn"
+            onclick="quickChat('What is your return policy?')"
+        >
+            Returns
+        </button>
+
+
+        <button
+            class="quick-btn"
+            onclick="quickChat('How can I contact you?')"
+        >
+            Contact
+        </button>
+
+
+    </div>
+
+
+    <!-- CHAT INPUT -->
+
+    <div class="chat-input-area">
+
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your message..."
+        >
+
+
+        <button
+            class="chat-send"
+            id="chatSend"
+        >
+
+            <i class="bi bi-send-fill"></i>
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+
+/* =========================================================
+   CART SYSTEM
+========================================================= */
+
+let cart = [];
+
+let wishlist = 0;
+
+
+const cartBtn =
+    document.getElementById("cartBtn");
+
+const cartSidebar =
+    document.getElementById("cartSidebar");
+
+const cartOverlay =
+    document.getElementById("cartOverlay");
+
+const closeCart =
+    document.getElementById("closeCart");
+
+const cartItems =
+    document.getElementById("cartItems");
+
+const cartTotal =
+    document.getElementById("cartTotal");
+
+const cartCount =
+    document.querySelector(".cart-count");
+
+const wishlistCount =
+    document.querySelector(".wishlist-count");
+
+const toast =
+    document.getElementById("toast");
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(message) {
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 2500);
+
+}
+
+
+/* =========================================================
+   OPEN CART
+========================================================= */
+
+cartBtn.addEventListener("click", () => {
+
+    cartSidebar.classList.add("active");
+
+    cartOverlay.classList.add("active");
+
+});
+
+
+/* =========================================================
+   CLOSE CART
+========================================================= */
+
+function hideCart() {
+
+    cartSidebar.classList.remove("active");
+
+    cartOverlay.classList.remove("active");
+
+}
+
+closeCart.addEventListener("click", hideCart);
+
+cartOverlay.addEventListener("click", hideCart);
+
+
+/* =========================================================
+   ADD CART
+========================================================= */
+
+document.querySelectorAll(".add-cart").forEach(button => {
+
+
+    button.addEventListener("click", () => {
+
+
+        const name =
+            button.dataset.name;
+
+
+        const price =
+            parseFloat(button.dataset.price);
+
+
+        const existing =
+            cart.find(item => item.name === name);
+
+
+        if (existing) {
+
+            existing.quantity++;
+
+        } else {
+
+            cart.push({
+
+                name: name,
+                price: price,
+                quantity: 1
+
+            });
+
+        }
+
+
+        updateCart();
+
+
+        showToast(
+            name + " added to your bag."
+        );
+
+
+    });
+
+});
+
+
+/* =========================================================
+   UPDATE CART
+========================================================= */
+
+function updateCart() {
+
+
+    cartItems.innerHTML = "";
+
+
+    let total = 0;
+
+    let count = 0;
+
+
+    if (cart.length === 0) {
+
+
+        cartItems.innerHTML = `
+
+            <div class="empty-cart">
+
+                <i class="bi bi-bag fs-1"></i>
+
+                <p class="mt-3">
+                    Your bag is empty.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    cart.forEach((item, index) => {
+
+
+        total +=
+            item.price * item.quantity;
+
+
+        count += item.quantity;
+
+
+        const itemHTML =
+            document.createElement("div");
+
+
+        itemHTML.className =
+            "d-flex justify-content-between align-items-center mb-4";
+
+
+        itemHTML.innerHTML = `
+
+            <div>
+
+                <strong>
+                    ${item.name}
+                </strong>
+
+                <div class="small text-muted">
+
+                    ৳${item.price.toFixed(2)}
+                    ×
+                    ${item.quantity}
+
+                </div>
+
+
+                <div class="mt-2">
+
+                    <button
+                        class="btn btn-sm btn-outline-dark decrease"
+                        data-index="${index}"
+                    >
+                        -
+                    </button>
+
+
+                    <button
+                        class="btn btn-sm btn-outline-dark increase"
+                        data-index="${index}"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+
+                    ৳${(
+                        item.price *
+                        item.quantity
+                    ).toFixed(2)}
+
+                </strong>
+
+
+                <button
+                    class="btn btn-sm text-danger remove-item"
+                    data-index="${index}"
+                >
+
+                    <i class="bi bi-trash"></i>
+
+                </button>
+
+            </div>
+
+        `;
+
+
+        cartItems.appendChild(itemHTML);
+
+
+    });
+
+
+    cartCount.textContent = count;
+
+    cartTotal.textContent =
+        "৳" + total.toFixed(2);
+
+
+    /* REMOVE */
+
+    document
+        .querySelectorAll(".remove-item")
+        .forEach(button => {
+
+
+            button.addEventListener("click", () => {
+
+
+                const index =
+                    button.dataset.index;
+
+
+                cart.splice(index, 1);
+
+
+                updateCart();
+
+
+            });
+
+
+        });
+
+
+    /* INCREASE */
+
+    document
+        .querySelectorAll(".increase")
+        .forEach(button => {
+
+
+            button.addEventListener("click", () => {
+
+
+                const index =
+                    button.dataset.index;
+
+
+                cart[index].quantity++;
+
+
+                updateCart();
+
+
+            });
+
+
+        });
+
+
+    /* DECREASE */
+
+    document
+        .querySelectorAll(".decrease")
+        .forEach(button => {
+
+
+            button.addEventListener("click", () => {
+
+
+                const index =
+                    button.dataset.index;
+
+
+                if (
+                    cart[index].quantity > 1
+                ) {
+
+                    cart[index].quantity--;
+
+                } else {
+
+                    cart.splice(index, 1);
+
+                }
+
+
+                updateCart();
+
+
+            });
+
+
+        });
+
+
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+document
+    .querySelectorAll(".wishlist-btn")
+    .forEach(button => {
+
+
+        button.addEventListener("click", () => {
+
+
+            const icon =
+                button.querySelector("i");
+
+
+            if (
+                icon.classList.contains("bi-heart")
+            ) {
+
+
+                icon.classList.remove(
+                    "bi-heart"
+                );
+
+
+                icon.classList.add(
+                    "bi-heart-fill"
+                );
+
+
+                wishlist++;
+
+
+                showToast(
+                    "Added to wishlist."
+                );
+
+
+            } else {
+
+
+                icon.classList.remove(
+                    "bi-heart-fill"
+                );
+
+
+                icon.classList.add(
+                    "bi-heart"
+                );
+
+
+                wishlist--;
+
+
+            }
+
+
+            wishlistCount.textContent =
+                wishlist;
+
+
+        });
+
+
+    });
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+const searchBtn =
+    document.getElementById("searchBtn");
+
+const searchModal =
+    document.getElementById("searchModal");
+
+const closeSearch =
+    document.getElementById("closeSearch");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const searchResult =
+    document.getElementById("searchResult");
+
+
+searchBtn.addEventListener("click", () => {
+
+
+    searchModal.classList.add("active");
+
+
+    setTimeout(() => {
+
+        searchInput.focus();
+
+    }, 200);
+
+
+});
+
+
+closeSearch.addEventListener("click", () => {
+
+
+    searchModal.classList.remove(
+        "active"
+    );
+
+
+    searchInput.value = "";
+
+    searchResult.innerHTML = "";
+
+
+});
+
+
+searchInput.addEventListener(
+    "input",
+    () => {
+
+
+        const keyword =
+            searchInput.value
+                .toLowerCase()
+                .trim();
+
+
+        const products =
+            document.querySelectorAll(
+                ".product-card"
+            );
+
+
+        let found = 0;
+
+
+        products.forEach(product => {
+
+
+            const name =
+                product
+                    .querySelector(
+                        ".product-name"
+                    )
+                    .textContent
+                    .toLowerCase();
+
+
+            if (
+                keyword &&
+                name.includes(keyword)
+            ) {
+
+                found++;
+
+            }
+
+
+        });
+
+
+        if (!keyword) {
+
+
+            searchResult.innerHTML =
+                "";
+
+
+        } else if (found > 0) {
+
+
+            searchResult.innerHTML = `
+
+                <h5>
+                    ${found} product(s) found
+                </h5>
+
+                <p class="text-white-50">
+                    Close search to view the products.
+                </p>
+
+            `;
+
+
+        } else {
+
+
+            searchResult.innerHTML = `
+
+                <h5>
+                    No products found.
+                </h5>
+
+            `;
+
+
+        }
+
+
+    }
+);
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+document
+    .getElementById("newsletterForm")
+    .addEventListener(
+        "submit",
+        function(e) {
+
+
+            e.preventDefault();
+
+
+            showToast(
+                "Thank you for subscribing!"
+            );
+
+
+            this.reset();
+
+
+        }
+    );
+
+
+/* =========================================================
+   COLLECTION WINDOW TEMPLATE
+========================================================= */
+
+function createCollectionWindow(
+    title,
+    subtitle,
+    heroImage,
+    products
+) {
+
+
+    const newWindow =
+        window.open("", "_blank");
+
+
+    if (!newWindow) {
+
+
+        alert(
+            "Please allow pop-ups for KQ Fashion."
+        );
+
+
+        return;
+
+
+    }
+
+
+    let productHTML = "";
+
+
+    products.forEach(product => {
+
+
+        productHTML += `
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        ${
+                            product.badge
+                            ?
+                            `<span class="badge">
+                                ${product.badge}
+                            </span>`
+                            :
+                            ""
+                        }
+
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="category">
+                            ${product.category}
+                        </div>
+
+                        <div class="product-name">
+                            ${product.name}
+                        </div>
+
+                        <div class="price">
+                            ৳${product.price}
+                        </div>
+
+
+                        <div class="size-title">SELECT SIZE</div>
+                        <div class="sizes">
+                            <button type="button" class="size-btn" onclick="selectSize(this, 'S')">S</button>
+                            <button type="button" class="size-btn" onclick="selectSize(this, 'M')">M</button>
+                            <button type="button" class="size-btn" onclick="selectSize(this, 'L')">L</button>
+                            <button type="button" class="size-btn" onclick="selectSize(this, 'XL')">XL</button>
+                            <button type="button" class="size-btn" onclick="selectSize(this, 'XLL')">XLL</button>
+                        </div>
+                        <button
+                            class="add-btn"
+                            onclick="addCollectionToBag('${product.name}', '${product.price}', this)"
+                        >
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+
+    newWindow.document.write(`
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        KQ Fashion | ${title}
+    </title>
+
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            color: #111;
+        }
+
+
+        .navbar {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+
+        .hero {
+            min-height: 520px;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.5),
+                    rgba(0,0,0,.5)
+                ),
+                url("${heroImage}")
+                center/cover;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 80px);
+        }
+
+
+        .hero p {
+            color: #eee;
+        }
+
+
+        .section {
+            padding: 85px 0;
+        }
+
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+        }
+
+
+        .product-card {
+            margin-bottom: 30px;
+            transition: .3s;
+        }
+
+
+        .product-card:hover {
+            transform: translateY(-7px);
+        }
+
+
+        .product-image {
+            height: 430px;
+            position: relative;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+
+        .badge {
+            position: absolute;
+            z-index: 2;
+            top: 15px;
+            left: 15px;
+            background: #111;
+            color: #fff;
+            padding: 7px 10px;
+            font-size: 10px;
+        }
+
+
+        .product-info {
+            padding-top: 15px;
+        }
+
+
+        .category {
+            color: #999;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        .product-name {
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+
+        .price {
+            font-weight: 700;
+        }
+
+
+        .add-btn {
+            margin-top: 12px;
+            border: 1px solid #111;
+            background: #111;
+            color: white;
+            padding: 10px 18px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+
+        .add-btn:hover {
+            background: white;
+            color: #111;
+        }
+
+        .size-title { margin-top: 14px; font-size: 10px; font-weight: 700; letter-spacing: 1px; }
+        .sizes { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+        .size-btn { border: 1px solid #ccc; background: white; color: #111; min-width: 38px; padding: 8px 10px; font-size: 10px; font-weight: 700; cursor: pointer; transition: .25s; }
+        .size-btn:hover, .size-btn.active { background: #111; color: white; border-color: #111; transform: translateY(-2px); }
+
+
+        footer {
+            margin-top: 50px;
+            padding: 60px 0;
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+
+
+        @media(max-width: 767px) {
+
+            .product-image {
+                height: 360px;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <nav class="navbar bg-white">
+
+        <div class="container">
+
+            <div class="logo">
+                KQ FASHION
+            </div>
+
+
+            <button
+                class="btn btn-dark"
+                onclick="window.close()"
+            >
+                BACK
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div>
+
+            <div class="text-uppercase small fw-bold mb-3">
+                KQ Fashion Collection
+            </div>
+
+            <h1>
+                ${title}
+            </h1>
+
+            <p>
+                ${subtitle}
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+
+
+            <div class="text-center mb-5">
+
+                <div class="text-uppercase small fw-bold">
+                    KQ FASHION
+                </div>
+
+                <h2 class="section-title">
+                    ${title}
+                </h2>
+
+                <p class="text-muted">
+                    ${subtitle}
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                ${productHTML}
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>
+            KQ FASHION
+        </h3>
+
+        <p class="text-secondary">
+            Contemporary fashion for modern living.
+        </p>
+
+        <p class="text-secondary">
+            © 2026 KQ Fashion. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+
+    `);
+
+
+    newWindow.document.close();
+
+}
+
+function selectSize(button, size) {
+    const wrapper = button.parentElement;
+    wrapper.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    wrapper.dataset.selectedSize = size;
+}
+
+function addCollectionToBag(name, price, button) {
+    const wrapper = button.previousElementSibling;
+    const size = wrapper ? wrapper.dataset.selectedSize : '';
+    if (!size) { alert('Please select a size first.'); return; }
+
+    const checkoutWindow = window.open('', '_blank', 'width=650,height=760');
+    if (!checkoutWindow) { alert('Please allow pop-ups for KQ Fashion.'); return; }
+
+    checkoutWindow.document.write(`<!DOCTYPE html><html><head>
+<title>KQ Fashion | Checkout</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f7f7;font-family:Arial,sans-serif;color:#111}.checkout{max-width:620px;margin:40px auto;background:#fff;padding:35px;box-shadow:0 15px 50px rgba(0,0,0,.08);animation:fadeUp .5s ease}h1{font-family:Georgia,serif;text-align:center;letter-spacing:3px;margin-bottom:30px}.summary{border:1px solid #eee;padding:20px;margin-bottom:25px}.summary-row{display:flex;justify-content:space-between;margin:8px 0}label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:12px;display:block}input,textarea{width:100%;padding:12px;border:1px solid #ddd;margin-top:6px}.checkout-btn{width:100%;margin-top:22px;padding:15px;background:#111;color:#fff;border:1px solid #111;font-weight:700;letter-spacing:1px}.checkout-btn:hover{background:#fff;color:#111}@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+</style></head><body><div class="checkout"><h1>KQ FASHION</h1>
+<div class="summary"><h5>ORDER SUMMARY</h5><div class="summary-row"><span>Product</span><strong>${name}</strong></div><div class="summary-row"><span>Size</span><strong>${size}</strong></div><div class="summary-row"><span>Price</span><strong>৳${price}</strong></div></div>
+<form onsubmit="event.preventDefault(); alert('Order placed successfully! Thank you for shopping with KQ Fashion.');"><label>Full Name</label><input required placeholder="Your full name"><label>Phone Number</label><input required type="tel" placeholder="01XXXXXXXXX"><label>Delivery Address</label><textarea required rows="3" placeholder="Your complete delivery address"></textarea><label>City</label><input required placeholder="Dhaka"><button class="checkout-btn" type="submit">PLACE ORDER</button></form>
+</div></body></html>`);
+    checkoutWindow.document.close();
+}
+
+/* =========================================================
+   MEN COLLECTION
+========================================================= */
+
+function openMenCollection() {
+
+
+    createCollectionWindow(
+
+        "Men's Collection",
+
+        "Modern essentials for the modern man.",
+
+        "https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=2000&q=85",
+
+
+        [
+
+
+            {
+                name: "Premium Essential Jacket",
+                category: "Men / Jackets",
+                price: "14644.00",
+                image: "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=85",
+                badge: "NEW"
+            },
+
+
+            {
+                name: "Premium Oxford Shirt",
+                category: "Men / Shirts",
+                price: "7261.00",
+                image: "https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=900&q=85"
+            },
+
+
+            {
+                name: "Modern Streetwear Set",
+                category: "Men / Collection",
+                price: "12183.00",
+                image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+            },
+
+
+            {
+                name: "Classic Denim Collection",
+                category: "Men / Denim",
+                price: "9722.00",
+                image: "https://images.unsplash.com/photo-1551489186-cf8726f514f8?auto=format&fit=crop&w=900&q=85"
+            }
+
+
+        ]
+
+    );
+
+}
+
+
+/* =========================================================
+   WOMEN COLLECTION
+========================================================= */
+
+function openWomenCollection() {
+
+
+    createCollectionWindow(
+
+        "Women's Collection",
+
+        "Elegant styles for every occasion.",
+
+        "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=2000&q=85",
+
+
+        [
+
+
+            {
+                name: "Classic Tailored Blazer",
+                category: "Women / Blazers",
+                price: "10952.00",
+                image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85",
+                badge: "NEW"
+            },
+
+
+            {
+                name: "Elegant Evening Dress",
+                category: "Women / Dresses",
+                price: "9230.00",
+                image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85",
+                badge: "SALE"
+            },
+
+
+            {
+                name: "Premium Silk Top",
+                category: "Women / Tops",
+                price: "7876.00",
+                image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85"
+            },
+
+
+            {
+                name: "Minimal Leather Handbag",
+                category: "Women / Accessories",
+                price: "15875.00",
+                image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85"
+            }
+
+
+        ]
+
+    );
+
+}
+
+
+/* =========================================================
+   MEN'S PANJABI COLLECTION
+========================================================= */
+
+function openPanjabiCollection() {
+
+
+    createCollectionWindow(
+
+        "Men's Panjabi",
+
+        "Premium traditional Panjabis for Eid, weddings and special occasions.",
+
+        "https://images.unsplash.com/photo-1622445272461-c6580cab8755?auto=format&fit=crop&w=2000&q=85",
+
+
+        [
+
+
+            {
+                name: "Royal Black Panjabi",
+                category: "Panjabi / Premium",
+                price: "10952.00",
+                image: "https://images.unsplash.com/photo-1622445272461-c6580cab8755?auto=format&fit=crop&w=900&q=85",
+                badge: "NEW"
+            },
+
+
+            {
+                name: "Classic White Panjabi",
+                category: "Panjabi / Classic",
+                price: "8491.00",
+                image: "https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=900&q=85"
+            },
+
+
+            {
+                name: "Embroidered Premium Panjabi",
+                category: "Panjabi / Embroidery",
+                price: "14644.00",
+                image: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=85",
+                badge: "PREMIUM"
+            },
+
+
+            {
+                name: "Eid Special Panjabi",
+                category: "Panjabi / Eid",
+                price: "12183.00",
+                image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=85"
+            },
+
+
+            {
+                name: "Royal Blue Panjabi",
+                category: "Panjabi / Traditional",
+                price: "9722.00",
+                image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85"
+            },
+
+
+            {
+                name: "Festive Gold Panjabi",
+                category: "Panjabi / Festive",
+                price: "15875.00",
+                image: "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=900&q=85",
+                badge: "LIMITED"
+            }
+
+
+        ]
+
+    );
+
+}
+
+
+/* =========================================================
+   CHATBOT
+========================================================= */
+
+const chatButton =
+    document.getElementById("chatButton");
+
+const chatWindow =
+    document.getElementById("chatWindow");
+
+const chatClose =
+    document.getElementById("chatClose");
+
+const chatInput =
+    document.getElementById("chatInput");
+
+const chatSend =
+    document.getElementById("chatSend");
+
+const chatBody =
+    document.getElementById("chatBody");
+
+
+/* OPEN CHAT */
+
+chatButton.addEventListener("click", () => {
+
+    chatWindow.classList.toggle("active");
+
+});
+
+
+/* CLOSE CHAT */
+
+chatClose.addEventListener("click", () => {
+
+    chatWindow.classList.remove("active");
+
+});
+
+
+/* =========================================================
+   ADD CHAT MESSAGE
+========================================================= */
+
+function addChatMessage(
+    message,
+    type
+) {
+
+
+    const div =
+        document.createElement("div");
+
+
+    div.className =
+        type === "user"
+        ? "user-message"
+        : "bot-message";
+
+
+    div.innerHTML =
+        message;
+
+
+    chatBody.appendChild(div);
+
+
+    chatBody.scrollTop =
+        chatBody.scrollHeight;
+
+}
+
+
+/* =========================================================
+   BOT RESPONSE
+========================================================= */
+
+function getBotResponse(message) {
+
+
+    const text =
+        message.toLowerCase();
+
+
+    if (
+        text.includes("hello") ||
+        text.includes("hi") ||
+        text.includes("hey")
+    ) {
+
+        return `
+            Hello! 👋
+            Welcome to KQ Fashion.
+            How can I help you?
+        `;
+
+    }
+
+
+    if (
+        text.includes("product") ||
+        text.includes("collection") ||
+        text.includes("shop")
+    ) {
+
+        return `
+            We have Men's, Women's and
+            Men's Panjabi collections.
+            <br><br>
+            You can select a collection
+            from the top menu.
+        `;
+
+    }
+
+
+    if (
+        text.includes("panjabi") ||
+        text.includes("punjabi")
+    ) {
+
+        return `
+            Our Men's Panjabi collection
+            includes premium traditional
+            and modern styles.
+            <br><br>
+            Click <b>MEN'S PANJABI</b>
+            in the top menu to explore.
+        `;
+
+    }
+
+
+    if (
+        text.includes("delivery") ||
+        text.includes("shipping")
+    ) {
+
+        return `
+            🚚 We offer shipping throughout
+            Bangladesh.
+            <br><br>
+            Standard delivery usually takes
+            2–5 business days.
+        `;
+
+    }
+
+
+    if (
+        text.includes("return") ||
+        text.includes("refund")
+    ) {
+
+        return `
+            🔄 We offer a 30-day return policy
+            for eligible products.
+            <br><br>
+            Please make sure the product is
+            unused and in original condition.
+        `;
+
+    }
+
+
+    if (
+        text.includes("size") ||
+        text.includes("sizing")
+    ) {
+
+        return `
+            📏 We offer multiple sizes.
+            <br><br>
+            For the best fit, please check
+            the size guide on the product
+            page.
+        `;
+
+    }
+
+
+    if (
+        text.includes("price") ||
+        text.includes("cost")
+    ) {
+
+        return `
+            💰 Our prices vary by product.
+            <br><br>
+            You can see the price directly
+            under each product.
+        `;
+
+    }
+
+
+    if (
+        text.includes("contact") ||
+        text.includes("phone") ||
+        text.includes("email")
+    ) {
+
+        return `
+            📞 You can contact KQ Fashion:
+            <br><br>
+            Email:
+            hello@kqfashion.com
+            <br>
+            Phone:
+            +880 1XXX-XXXXXX
+            <br>
+            Location:
+            Dhaka, Bangladesh
+        `;
+
+    }
+
+
+    if (
+        text.includes("thank")
+    ) {
+
+        return `
+            You're very welcome! 😊
+            Happy shopping with KQ Fashion.
+        `;
+
+    }
+
+
+    return `
+        Thanks for your message! 😊
+        <br><br>
+        I can help with:
+        <br>
+        • Products
+        <br>
+        • Men's Panjabi
+        <br>
+        • Delivery
+        <br>
+        • Returns
+        <br>
+        • Sizes
+        <br>
+        • Contact information
+    `;
+
+}
+
+
+/* =========================================================
+   SEND CHAT
+========================================================= */
+
+function sendChat() {
+
+
+    const message =
+        chatInput.value.trim();
+
+
+    if (!message) {
+        return;
+    }
+
+
+    addChatMessage(
+        message,
+        "user"
+    );
+
+
+    chatInput.value = "";
+
+
+    setTimeout(() => {
+
+
+        const response =
+            getBotResponse(message);
+
+
+        addChatMessage(
+            response,
+            "bot"
+        );
+
+
+    }, 500);
+
+}
+
+
+/* SEND BUTTON */
+
+chatSend.addEventListener(
+    "click",
+    sendChat
+);
+
+
+/* ENTER KEY */
+
+chatInput.addEventListener(
+    "keydown",
+    function(e) {
+
+
+        if (e.key === "Enter") {
+
+            sendChat();
+
+        }
+
+
+    }
+);
+
+
+/* =========================================================
+   QUICK CHAT
+========================================================= */
+
+function quickChat(message) {
+
+
+    addChatMessage(
+        message,
+        "user"
+    );
+
+
+    setTimeout(() => {
+
+
+        const response =
+            getBotResponse(message);
+
+
+        addChatMessage(
+            response,
+            "bot"
+        );
+
+
+    }, 400);
+
+}
+
+
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(e) {
+
+
+        if (e.key === "Escape") {
+
+
+            searchModal.classList.remove(
+                "active"
+            );
+
+
+            hideCart();
+
+
+            chatWindow.classList.remove(
+                "active"
+            );
+
+
+        }
+
+
+    }
+);
+
+
+/* =========================================================
+   INITIAL CART
+========================================================= */
+
+updateCart();
+
+
+
+/* =========================================================
+   SCROLL REVEAL ANIMATION
+========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transitionDelay = `${(index % 4) * 70}ms`;
+                    entry.target.classList.add("visible");
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        revealItems.forEach(item => observer.observe(item));
+    } else {
+        revealItems.forEach(item => item.classList.add("visible"));
+    }
+});
+
+
+</script>
+
+
+</body>
+
+</html>
